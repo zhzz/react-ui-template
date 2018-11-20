@@ -1,0 +1,11 @@
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background: #F2F2F2;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 14px;
+}
