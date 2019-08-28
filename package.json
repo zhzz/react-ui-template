@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@skbkontur/react-icons": "latest",
     "@skbkontur/react-ui": "latest",
     "@skbkontur/react-ui-validations": "latest",
     "react": "latest",
