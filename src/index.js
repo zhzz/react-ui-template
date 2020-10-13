@@ -1,8 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import { Center, Gapped, Input, Button } from '@skbkontur/react-ui/components/all';
-import { ValidationContainer, ValidationWrapperV1, tooltip } from '@skbkontur/react-ui-validations';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import { Center, Gapped, Input, Button } from "@skbkontur/react-ui";
+import {
+  ValidationContainer,
+  ValidationWrapper,
+  tooltip,
+} from "@skbkontur/react-ui-validations";
 
 class App extends React.Component {
   render() {
@@ -11,21 +15,28 @@ class App extends React.Component {
         <p>
           <b>react-ui</b> + <b>react-ui-validations</b>
         </p>
-        <form onSubmit={(e) => { e.preventDefault(); this.container.submit(); }}>
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            this.container.submit();
+          }}
+        >
           <Gapped>
-            <ValidationContainer ref={el => this.container = el}>
-              <ValidationWrapperV1
-                renderMessage={tooltip('left middle')}
-                validationInfo={{ message: 'Ошибка!', type: 'submit' }}
+            <ValidationContainer ref={(el) => (this.container = el)}>
+              <ValidationWrapper
+                renderMessage={tooltip("left middle")}
+                validationInfo={{ message: "Ошибка!", type: "submit" }}
               >
-                <Input placeholder={'Валидация'} />
-              </ValidationWrapperV1>
+                <Input placeholder={"Валидация"} />
+              </ValidationWrapper>
             </ValidationContainer>
-            <Button use="success" type="submit">Ок</Button>
+            <Button use="success" type="submit">
+              Ок
+            </Button>
           </Gapped>
         </form>
         <p>
-          Форкай, воспроизводи кейсы, делись, <br/>
+          Форкай, воспроизводи кейсы, делись, <br />
           прикрепляй к своим issue.
         </p>
       </Center>
@@ -33,4 +44,4 @@ class App extends React.Component {
   }
 }
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById("root"));
